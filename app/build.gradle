@@ -30,13 +30,13 @@
 
 apply plugin: 'com.android.application'
 
-apply plugin: 'kotlin-android'
+// apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
 def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
-keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+// keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
   compileSdkVersion 27
@@ -50,7 +50,7 @@ android {
 
     vectorDrawables.useSupportLibrary = true
 
-    buildConfigField 'String', 'FOOD2FORK_API_KEY', keystoreProperties['FOOD2FORK_API_KEY']
+//    buildConfigField 'String', 'FOOD2FORK_API_KEY', keystoreProperties['FOOD2FORK_API_KEY']
   }
   buildTypes {
     release {
