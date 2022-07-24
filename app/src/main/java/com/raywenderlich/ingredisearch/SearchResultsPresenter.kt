@@ -4,7 +4,7 @@ class SearchResultsPresenter(val repository = RecipeRepository): BasePresenter<S
     
     fun search(query: String) {
         view?.showLoading()
-        repository.getRecipes(query, object : RecipeRepository.RepositoryCallback<List<Recipe>> {
+        repository.getRecipes(query, object : RepositoryCallback<List<Recipe>> {
             
             override fun onSuccess(recipes: List<Recipe>?) {
                 this@SearchResultsPresenter.recipes = recipes
